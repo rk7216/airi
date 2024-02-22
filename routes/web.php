@@ -12,7 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\PostController;  //外部にあるPostControllerクラスをインポート。
 
+
+Route::get('/posts', [PostController::class, 'index']);
 Route::get('/', function () {
     return view('welcome');
 });
