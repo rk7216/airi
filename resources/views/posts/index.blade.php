@@ -9,11 +9,11 @@
     </head>
     <body class="antialiased">
         <h1>Blog name</h1>
+        <a href="/posts/create">create</a>
         <div class='posts'>
             @foreach ($posts as $post)
                 <div class='post'>
                     <h2 class='title'><a href="/posts/{{ $post->id }}">{{ $post->title }}</a></h2>
-                    //{{ $post->title }}
                     <p class='body'>{{ $post->body }}</p>
                 </div>
             @endforeach
